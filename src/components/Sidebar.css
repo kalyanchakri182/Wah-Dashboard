@@ -1,0 +1,282 @@
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: #f6f8fa;
+}
+
+.app {
+    display: flex;
+}
+
+.sidebar {
+    width: 230px;
+    background-color: #1b2431;
+    color: white;
+    height: 100vh;
+    padding: 20px;
+}
+
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 15px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar li:hover {
+    color: #f9a826;
+}
+
+.dashboard {
+    flex: 1;
+    padding: 20px;
+}
+
+.top-cards {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.card {
+    flex: 1;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.card h4 {
+    margin: 0;
+    color: #666;
+}
+
+.card p {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.card span {
+    color: green;
+    font-size: 14px;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.box {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.box h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* --- Logout Section --- */
+.logout-section {
+    margin-top: auto;
+    /* pushes to bottom */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.logout-btn {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.logout-btn:hover {
+    color: #ffffff;
+}
+
+/* --- Subtitle in Sidebar --- */
+.subtitle {
+    color: rgb(247, 167, 7);
+    font-weight: normal;
+    font-size: 15px;
+}
+
+
+
+/* --- Updated Sidebar Styles --- */
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* pushes top and bottom apart */
+    height: 100vh;
+    /* full screen height */
+    width: 250px;
+    /* adjust width as needed */
+    background-color: #1e1e2f;
+    /* example background */
+    color: white;
+    padding: 20px;
+}
+
+
+
+
+
+
+.sidebar ul li:hover {
+    background: #f9a826;
+    border-radius: 8px;
+    padding-left: 10px;
+    color: #f6f8fa;
+}
+
+.logout-section {
+    margin-top: auto;
+    /* push to bottom */
+}
+
+.logout-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    background: #f7c16b;
+    color: white;
+    border: 1px;
+    padding: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.logout-btn:hover {
+    background: #f9a826;
+}
+
+/* logo iconn */
+
+.logo-icon {
+    color: #f9a826;
+    /* gold/yellow accent */
+    font-size: 1.7rem;
+    /* adjust size */
+    vertical-align: text-bottom;
+    margin: 0 5px;
+}
+
+/*
+.sidebar h2 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.4rem;
+}
+*/
+
+.sidebar-header {
+    border-bottom: 1px solid white;
+    /* the underline */
+    display: inline-block;
+    /* fits width of content */
+}
+
+
+@media (max-width: 900px) {
+    .main-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .main-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.dashboard {
+    background-color: #f3f4f6;
+    flex: 1;
+    padding: 20px;
+}
+
+.top-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+
+
+.main-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.top-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: #fff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    /* left & right sides */
+    align-items: center;
+}
+
+.card .left h4 {
+    font-size: 16px;
+    color: #a7a6a6;
+    margin-bottom: 5px;
+}
+
+.card .left p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+}
+
+.card .right {
+    font-size: 16px;
+    font-weight: 600;
+    color: green;
+}
+
+/* If you want negative values in red */
+.card .right:contains("-") {
+    color: red;
+}
