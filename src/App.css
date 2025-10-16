@@ -1,18 +1,23 @@
+/* --- Global Styles --- */
 body {
     margin: 0;
     font-family: "Poppins", sans-serif;
     background-color: #f6f8fa;
 }
 
+/* --- App Container --- */
 .app {
     display: flex;
 }
 
+/* --- Sidebar --- */
 .sidebar {
-    width: 230px;
+    width: 250px;
+    /* final width */
+    min-height: 100vh;
+    /* full height */
     background-color: #1b2431;
     color: white;
-    height: 100vh;
     padding: 20px;
 }
 
@@ -38,11 +43,15 @@ body {
     color: #f9a826;
 }
 
-.dashboard {
+/* --- Dashboard --- */
+.dashboard,
+.dashboard-content {
     flex: 1;
+    /* take remaining width */
     padding: 20px;
 }
 
+/* --- Top Cards --- */
 .top-cards {
     display: flex;
     gap: 20px;
@@ -73,6 +82,7 @@ body {
     font-size: 14px;
 }
 
+/* --- Main Grid --- */
 .main-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -89,4 +99,17 @@ body {
 .box h3 {
     margin-bottom: 10px;
     color: #333;
+}
+
+/* --- Login Page --- */
+.login-page {
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Main Content (flex row) --- */
+.main-content {
+    display: flex;
+    flex-direction: row;
+    /* Sidebar and dashboard side by side */
 }
