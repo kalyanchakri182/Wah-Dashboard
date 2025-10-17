@@ -27,7 +27,6 @@ function App() {
     <>
       {isLoggedIn ? (
         <div className="app">
-          {/* 👇 Pass down the function */}
           <Sidebar onLogout={() => setIsLoggedIn(false)} />
           <Dashboard />
         </div>
