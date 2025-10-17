@@ -4,14 +4,20 @@ import "./Sidebar.css";
 
 
 // constant Array of data to call in the charts
-const COLORS = ["#f9a826", "#4a90e2", "#e74c3c", "#2ecc71", "#9b59b6"];
+const COLORS = [
+    "#f9a826",
+    "#3a82b3ff",
+    "#e74c3c",
+    "#2ecc71",
+    "#9b59b6"
+];
 
 // Data
 const lineData = [40, 80, 100, 120, 160, 200];
 const lineCategories = ["2020", "2022", "2024", "2026", "2027", "2030"];
 
 const pieData = [
-    { name: "Active", value: 30 },
+    { name: "Active", value: 40 },
     { name: "Pending", value: 15 },
 ];
 
@@ -61,36 +67,59 @@ function Dashboard() {
 
     // Bar Chart Options
     const barOptions = {
-        chart:
-        {
+        chart: {
             id: "deals-chart",
-            toolbar: { show: false }
+            toolbar: { show: false },
         },
         plotOptions: {
             bar: {
                 borderRadius: 8,
-                columnWidth: "50%"
-            }
+                columnWidth: "50%",
+                distributed: true,
+                dataLabels: {
+                    position: "top", // 👈 show labels on top of bars
+                },
+            },
         },
         dataLabels: {
-            enabled: false
+            enabled: true,
+            formatter: (val) => val,
+            offsetY: -15,
+            style: {
+                fontSize: "14px",
+                colors: ["#6b6464ff"],
+                fontWeight: 600,
+            },
         },
         xaxis: {
-            categories: dealsData.map(d => d.category)
+            categories: dealsData.map((d) => d.category),
+            labels: {
+                show: false, // 👈 hides category names
+            },
+        },
+        yaxis: {
+            labels: {
+                show: false, // hides y-axis labels
+            },
         },
         colors: COLORS,
         tooltip: {
-            theme: "light"
+            theme: "light",
         },
         grid: {
-            borderColor: "#eee"
+            borderColor: "#eee",
+        },
+        states: {
+            normal: { filter: { type: "none", value: 0 } },
+            hover: { filter: { type: "lighten", value: 0.15 } },
+            active: { filter: { type: "darken", value: 0.35 } },
         },
     };
-
-    const barSeries = [{
-        name: "Deals",
-        data: dealsData.map(d => d.value)
-    }];
+    const barSeries = [
+        {
+            name: "Deals",
+            data: dealsData.map((d) => d.value),
+        }];
 
     return (
         <main className="dashboard">

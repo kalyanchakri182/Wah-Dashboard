@@ -31,7 +31,7 @@
 }
 
 .login-card button {
-    width: 100%;
+    width: 107%;
     padding: 10px;
     background-color: #f9a826;
     border: none;
@@ -44,4 +44,9 @@
 
 .login-card button:hover {
     background-color: #f7c16b;
+}
+
+.log {
+    color: #eb9204;
+    font-family: 'Brush Script MT', cursive;
 }

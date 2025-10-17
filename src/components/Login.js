@@ -18,7 +18,7 @@ function Login({ onLogin }) {
     return (
         <div className="login-page">
             <div className="login-card">
-                <h2>Welcome Back</h2>
+                <h2>Wah! <p className="log">Smart Deals</p></h2>
                 <form onSubmit={handleSubmit}>
                     <input
                         type="text"
