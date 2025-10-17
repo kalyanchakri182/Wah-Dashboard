@@ -108,3 +108,114 @@ function Dashboard() {
 }
 
 export default Dashboard;
+
+
+
+/* ===== Sidebar Main Container ===== */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: linear - gradient(180deg, #1e1e2f 0 %, #2d2d44 100 %);
+    color: #fff;
+    display: flex;
+    flex - direction: column;
+    justify - content: space - between;
+    padding: 20px 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    box - shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
+    font - family: "Poppins", sans - serif;
+}
+
+/* ===== Header Section ===== */
+.sidebar - header {
+    text - align: center;
+    margin - bottom: 30px;
+}
+
+.mar {
+    font - size: 24px;
+    font - weight: 600;
+    display: flex;
+    align - items: center;
+    justify - content: center;
+    gap: 8px;
+    color: #ffcc00;
+}
+
+.logo - icon {
+    font - size: 28px;
+}
+
+.subtitle {
+    display: block;
+    font - size: 14px;
+    color: #bdbdbd;
+}
+
+/* ===== Menu List ===== */
+.sidebar ul {
+    list - style: none;
+    padding: 0;
+    margin: 0;
+    flex - grow: 1;
+}
+
+.sidebar ul li {
+    display: flex;
+    align - items: center;
+    gap: 12px;
+    padding: 12px 25px;
+    font - size: 15px;
+    cursor: pointer;
+    color: #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.sidebar ul li:hover {
+    background - color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+/* ===== Logout Section ===== */
+.logout - section {
+    padding: 20px;
+    border - top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logout - btn {
+    width: 100 %;
+    background: #ff4b5c;
+    color: #fff;
+    border: none;
+    padding: 10px 0;
+    border - radius: 8px;
+    font - size: 15px;
+    cursor: pointer;
+    display: flex;
+    align - items: center;
+    justify - content: center;
+    gap: 10px;
+    transition: background 0.3s ease;
+}
+
+.logout - btn:hover {
+    background: #e03e4f;
+}
+
+/* ===== Responsive ===== */
+@media(max - width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .sidebar ul li {
+        font - size: 14px;
+        padding: 10px 20px;
+    }
+
+    .logout - btn {
+        font - size: 14px;
+    }
+}

@@ -5,7 +5,13 @@ import { FaRocketchat } from "react-icons/fa";
 import { LuLayoutDashboard } from "react-icons/lu";
 import "./Sidebar.css";
 
-function Sidebar() {
+function Sidebar({ onLogout }) {
+    const handleLogout = () => {
+        if (onLogout) {
+            onLogout(); // 👈 This triggers the login view in App.js
+        }
+    };
+
     return (
         <aside className="sidebar">
             <div className="sidebar-header">
@@ -18,9 +24,6 @@ function Sidebar() {
                 </div>
             </div>
 
-
-
-            {/* Navigation Items */}
             <ul>
                 <li><LuLayoutDashboard /> Dashboard</li>
                 <li><BiSolidGroup /> Vendors</li>
@@ -33,14 +36,10 @@ function Sidebar() {
                 <li><FaTags /> Categories</li>
                 <li><FaBell /> Revenue</li>
                 <li><FaWallet /> Wallet</li>
-                <li>  </li>
-                <li> </li>
-                <li> </li>
             </ul>
 
-            {/* Logout Button at Bottom */}
             <div className="logout-section">
-                <button className="logout-btn">
+                <button className="logout-btn" onClick={handleLogout}>
                     <FaSignOutAlt /> Logout
                 </button>
             </div>

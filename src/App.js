@@ -17,7 +17,7 @@ export default App; */
 import React, { useState } from "react";
 import Sidebar from "./components/Sidebar";
 import Dashboard from "./components/Dashboard";
-import Login from "./components/Login"; // Make sure you have a Login component
+import Login from "./components/Login";
 import "./App.css";
 
 function App() {
@@ -27,7 +27,8 @@ function App() {
     <>
       {isLoggedIn ? (
         <div className="app">
-          <Sidebar />
+          {/* 👇 Pass down the function */}
+          <Sidebar onLogout={() => setIsLoggedIn(false)} />
           <Dashboard />
         </div>
       ) : (
